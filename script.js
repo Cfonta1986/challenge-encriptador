@@ -41,34 +41,10 @@ function desencriptar(){
     document.getElementById("copiar").style.display = "inherit";
 }
 
-function copiar(){
-    var contenido = document.querySelector("texto_resultado");
-    contenido.ariaSelected();
+function copiar() {
+    var contenido = document.querySelector("#texto_resultado");
+    contenido.select();
     document.execCommand("copy");
-    alert("Se copió!")
+    alert("¡Se copió!");
 }
 
-
-/*function copiar2(){
-    var contenido = document.getElementById("texto_resultado");
-    var selecciones = document.createRange;
-    selecciones.selectNodeContents(contenido);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(selecciones);
-    var res = document.execCommand("copy");
-    alert("Se copió!")
-}*/
-
-/*function copiar(){
-    var text = document.getElementsById("texto_resultado")[0].textContent;
-    navigator.clipboard.writeText(text);
-    inputTextElement.value = "";
-  }*/
-
-  /*function copiar(){
-    let copyText = document.querySelector("#texto_resultado");
-    copyText.select();
-    document.execCommand("copy");
-}
-
-document.querySelector("#copiar").addEventListener("click", copy);*/
